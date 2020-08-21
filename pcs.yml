@@ -1,6 +1,4 @@
 ---
-- hosts: localhost
-  remote_user: ubuntu
-  roles:
-    - common
-    - pcs
+- roles:
+  - common
+  - pcs
