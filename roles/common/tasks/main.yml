@@ -11,4 +11,9 @@
   timezone:
     name: Europe/Amsterdam
 
-
+- name: Set hosts
+  become: yes
+  blockinfile:
+    backup: yes
+    path: /etc/hosts
+    block: "{{ hosts }}"
