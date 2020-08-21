@@ -1,7 +1,10 @@
 ---
 # tasks file for pcs
-include_tasks: install.yml
+- name: Install required
+  include_tasks: install.yml
 
-include_tasks: configure.yml
+- name: Configure pacemaker
+  include_tasks: configure.yml
 
-include_tasks: restart.yml
+- name: Restart to make changes persist
+  include_tasks: restart.yml
