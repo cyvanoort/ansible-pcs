@@ -1,6 +1,7 @@
 ---
 - hosts: [185.211.249.119,185.211.249.120]
   remote_user: ubuntu
+  ansible_become: yes
   roles:
     - common
     - pcs
