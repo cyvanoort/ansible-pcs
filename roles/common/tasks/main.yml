@@ -1,12 +1,13 @@
 ---
 # tasks file for common
 - name: Update repository and Upgrade packages
+  become: yes
   apt:
     upgrade: dist
     update_cache: yes
-    become: yes
 
 - name: Setup timezone to Amsterdam
+  become: yes
   timezone:
     name: Europe/Amsterdam
     state: latest

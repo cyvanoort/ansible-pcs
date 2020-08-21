@@ -2,27 +2,27 @@
 # tasks file for pcs
 
 - name: install pacemaker
+  become: yes
   apt:
     name: ['pacemaker','corosync','pcs']
     state: latest
-    become: yes
 
 - name: set password for hacluster
+  become: yes
   user:
     name: hacluster
     password: simplepass
-    become: yes
 
 - name: restart and enable corosync
+  become: yes
   service:
     name: corosync
     state: restarted
     enabled: yes
-    become: yes
 
 - name: restart and enable pacemaker
+  become: yes
   service:
     name: pacemaker
     state: restarted
     enabled: yes
-    become: yes
