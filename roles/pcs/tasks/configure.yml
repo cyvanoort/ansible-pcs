@@ -2,7 +2,7 @@
 # tasks file for pcs
 - name: Place corosync config
   copy:
-    src: /corosync
+    src: corosync
     dest: /etc/corosync/corosync.conf
     backup: yes
 
