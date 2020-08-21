@@ -1,6 +1,6 @@
 ---
 - hosts: [185.211.249.119,185.211.249.120]
-  remote_user: root
+  remote_user: ubuntu
   roles:
     - common
     - pcs
