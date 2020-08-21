@@ -4,6 +4,7 @@
   apt:
     upgrade: dist
     update_cache: yes
+    become: yes
 
 - name: Setup timezone to Amsterdam
   timezone:
