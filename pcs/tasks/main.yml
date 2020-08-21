@@ -1,0 +1,33 @@
+---
+# tasks file for pcs
+- name: Update repository and Upgrade packages
+  apt:
+    upgrade: dist
+    update_cache: yes
+
+- name: install pacemaker
+  apt:
+    name: ['pacemaker','corosync','pcs']
+    state: latest
+
+- name: Setup timezone to Amsterdam
+  timezone:
+    name: Europe/Amsterdam
+    state: latest
+
+- name: set password for hacluster
+  user:
+    name: hacluster
+    password: simplepass
+
+- name: restart and enable corosync
+  service:
+    name: corosync
+    state: restarted
+    enabled: yes
+
+- name: restart and enable pacemaker
+  service:
+    name: pacemaker
+    state: restarted
+    enabled: yes
