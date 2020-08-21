@@ -1,0 +1,16 @@
+---
+# tasks file for pcs
+- name: restart and enable corosync
+  become: yes
+  service:
+    name: corosync
+    state: restarted
+    enabled: yes
+
+- name: restart and enable pacemaker
+  become: yes
+  service:
+    name: pacemaker
+    state: restarted
+    enabled: yes
+

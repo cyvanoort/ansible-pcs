@@ -1,0 +1,14 @@
+---
+# tasks file for pcs
+- name: install pacemaker
+  become: yes
+  apt:
+    name: ['pacemaker','corosync','pcs']
+    state: latest
+
+- name: set password for hacluster
+  become: yes
+  user:
+    name: hacluster
+    password: simplepass
+

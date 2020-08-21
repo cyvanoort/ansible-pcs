@@ -1,2 +1,8 @@
 ---
 # defaults file for pcs
+pcmk_cluster_name: pcscluster
+pcmk_user: hacluster
+pcmk_pretty_xml: false
+pcmk_votequorum: {}
+pcmk_cluster_options: {}
+pcmk_resource_defaults: {}
