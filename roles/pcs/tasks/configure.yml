@@ -1,12 +1,14 @@
 ---
 # tasks file for pcs
 - name: Place corosync config
+  become: yes
   copy:
     src: corosync
     dest: /etc/corosync/corosync.conf
     backup: yes
 
 - name: set IP in corosync config
+  become: yes
   replace:
     path: /etc/corosync/corosync.conf
     regexp: 'IWIP'
