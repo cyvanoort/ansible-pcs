@@ -12,4 +12,4 @@
   replace:
     path: /etc/corosync/corosync.conf
     regexp: 'IWIP'
-    replace: {{ hostvars[{{ inventory_hostname }}]['ansible_net1']['ipv4']['address'] }}
+    replace: "{{ intIP }}"
