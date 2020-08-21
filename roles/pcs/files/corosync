@@ -5,7 +5,7 @@ totem {
 	transport: udpu
 	interface {
 		ringnumber: 0
-		bindnetaddr: IP
+		bindnetaddr: IWIP
 		broadcast: yes
 		mcastport: 5407
 	}
