@@ -6,5 +6,5 @@
 - name: Configure pacemaker
   include_tasks: configure.yml
 
-  #- name: Restart to make changes persist
-  #include_tasks: restart.yml
+- name: Restart to make changes persist
+  include_tasks: restart.yml

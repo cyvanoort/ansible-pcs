@@ -8,3 +8,4 @@
     backup: yes
   with_items:
   - "{{ clusterNodes }}"
+  register: corosyncConfig.change
