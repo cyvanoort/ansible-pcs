@@ -14,7 +14,7 @@ totem {
 nodelist {
 	{% for i in item%}
 	node {
-		ring0_addr: {{ i.node }}
+		ring0_addr: {{ i }}
 	}
 	{% endfor %}
 }
