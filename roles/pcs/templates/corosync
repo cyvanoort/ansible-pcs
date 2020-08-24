@@ -12,12 +12,7 @@ totem {
 }
 
 nodelist {
-	node {
-		ring0_addr: pcs01
-	}
-	node {
-		ring0_addr: pcs02
-	}
+	node {ring0_addr: {{item.node}} }
 }
 
 logging {
