@@ -6,7 +6,7 @@
     name: corosync
     state: restarted
     enabled: yes
-  when: corosyncConfig.change
+  when: corosync_conf.changed
 
 - name: restart and enable pacemaker
   become: yes
@@ -14,4 +14,4 @@
     name: pacemaker
     state: restarted
     enabled: yes
-  when: corosyncConfig.change
+  when: corosync_conf.changed
