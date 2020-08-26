@@ -7,3 +7,4 @@ pcmk_votequorum: {}
 pcmk_cluster_options: {}
 pcmk_resource_defaults: {}
 intIp: 127.0.0.1
+clusterName: pcs
